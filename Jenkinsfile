@@ -19,7 +19,9 @@
                 stage("Setting up  our Virtual Enviroment and Installing dependancies"){
                 steps{script{
                               sh '''
-                    cd langgraph
+                    ls
+                    dir
+                    cd ./langgraph
                     python -m venv .venv 
                     
                     source .venv/bin/activate
