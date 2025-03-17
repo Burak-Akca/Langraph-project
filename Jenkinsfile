@@ -1,6 +1,11 @@
     pipeline{
         agent any
+        environment{
+            VENV_DIR='../.lama'
 
+
+
+        }
         stages{
             stage("cloning Github repo to jenkins"){
                 steps{script{
@@ -10,6 +15,18 @@
 
                 }}
             }
+
+                stage("Setting up  our Virtual Enviroment and Installing dependancies"){
+                steps{script{
+                                        echo "Current Working Directory: ${pwd()}"
+
+
+                }}
+            }
+
+
+
+
         }
 
     }
