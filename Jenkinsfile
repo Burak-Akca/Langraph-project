@@ -23,8 +23,10 @@
                 
                     python -m venv .venv 
                     
-                   sudo chmod +x .venv/bin/activate
-bash -c "source .venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt"
+                    . .venv/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                    
              
                     '''
 
