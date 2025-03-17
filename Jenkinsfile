@@ -18,8 +18,16 @@
 
                 stage("Setting up  our Virtual Enviroment and Installing dependancies"){
                 steps{script{
-                                        echo "Current Working Directory: ${pwd()}"
-
+                              sh '''
+                    cd langgraph
+                    python -m venv .venv 
+                    
+                    source .venv/bin/activate
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                    
+             
+                    '''
 
                 }}
             }
